@@ -811,6 +811,7 @@ z-index: 5;   /* DODAJ OVO */
 }
 
 
+
 .gallery-grid {
     grid-auto-flow: dense; /* Fills in gaps if you have different sized images */
 }
@@ -863,6 +864,7 @@ z-index: 5;   /* DODAJ OVO */
     font-size: 16px;               /* Make checkmark slightly bigger/clearer */
   }
 }
+
   /* 3. Hero Arrows - Smaller and tucked to the edges */
   .hero button.hero-prev,
   .hero button.hero-next {
@@ -935,9 +937,43 @@ z-index: 5;   /* DODAJ OVO */
 }
 
 
-.gallery-grid {
-    grid-auto-flow: dense; /* Fills in gaps if you have different sized images */
-
+/* Container for the Google text */
+.reviews-source {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Pushes it to the right */
+    gap: 8px;
+    margin-top: 20px;
+    margin-right: 10px;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
 }
 
+.reviews-source:hover {
+    opacity: 1;
+}
 
+.reviews-source img {
+    width: 16px;
+    height: 16px;
+    /* Resetting any global img styles that might interfere */
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.reviews-source span {
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+/* Mobile: Center the text so it looks better on phones */
+@media (max-width: 768px) {
+    .reviews-source {
+        justify-content: center;
+        margin-right: 0;
+        margin-top: 30px; /* More space on mobile */
+    }
+}
