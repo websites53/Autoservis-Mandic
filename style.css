@@ -845,6 +845,24 @@ z-index: 5;   /* DODAJ OVO */
     padding: 0 5px;
   }
 
+  @media (max-width: 768px) {
+  /* ... your existing mobile code ... */
+
+  /* FIX FOR CHECKMARK COLLISION */
+  .service-info ul li {
+    padding-left: 30px !important; /* Increase space for the checkmark */
+    text-align: left;              /* Keep text aligned left for readability */
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 12px;           /* More space between rows */
+    display: block;                /* Ensure it stays as a block */
+  }
+
+  .service-info ul li::before {
+    left: 0;                       /* Lock checkmark to the far left */
+    font-size: 16px;               /* Make checkmark slightly bigger/clearer */
+  }
+}
   /* 3. Hero Arrows - Smaller and tucked to the edges */
   .hero button.hero-prev,
   .hero button.hero-next {
@@ -921,4 +939,5 @@ z-index: 5;   /* DODAJ OVO */
     grid-auto-flow: dense; /* Fills in gaps if you have different sized images */
 
 }
+
 
